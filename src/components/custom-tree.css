@@ -1,0 +1,14 @@
+/* custom-tree.css */
+
+.node__root > circle {
+    fill: green;
+  }
+  
+  .node__branch > circle {
+    fill: black;
+  }
+  
+  .node__leaf > circle {
+    fill: none;
+    /* Let's also make the radius of leaf nodes larger */
+  } 
