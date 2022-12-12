@@ -1,82 +1,10 @@
 import React, { Component } from 'react';
-// import publicIp from "public-ip";
 import Tree from 'react-d3-tree';
 import './custom-tree.css';
 import './create-array.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
-//const WIDTH = 70;
-//const HEIGHT = 80;
-// var treedata = 
-//   {
-//     name: '1',
-//     children: [
-//       {
-//         name: '2',
-//         children: [
-//           {
-//             name: '4',
-//             children:[]
-//           },
-//           {
-//             name: '5',
-//             children:[]
-//           }
-//         ],
-//       },
-//       {
-//         name: '3',
-    
-//         children: [
-//           {
-//             name: '6',
-//             children:[]
-//           },
-//         ],
-//       },
-//     ],
-//   };
 
-// const orgChart = {
-//   name: 'CEO',
-//   children: [
-//     {
-//       name: 'Manager',
-//       attributes: {
-//         department: 'Production',
-//       },
-//       children: [
-//         {
-//           name: 'Foreman',
-//           attributes: {
-//             department: 'Fabrication',
-//           },
-//           children: [
-//             {
-//               name: 'Worker',
-//             },
-//           ],
-//         },
-//         {
-//           name: 'Foreman',
-//           attributes: {
-//             department: 'Assembly',
-//           },
-//           children: [
-//             {
-//               name: 'Worker',
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//   ],
-// };
-
-
-// export const getClientIp = async () => await publicIp.v4({
-//   fallbackUrls: [ "https://ifconfig.co/ip" ]
-// });
 
 
 export default class CreateArray extends Component {
@@ -110,18 +38,7 @@ export default class CreateArray extends Component {
   
 
   componentDidMount() {
-  //   publicIp.v4()
-  // .then(ip => {
-  //   // ip is the value, do your logic here
-  //   this.setState({ 
-  //     ip_address: ip
-  //   });
-  // })
-  // .catch(error => {
-  //   // if it throws an error, you can catch it and suppress it here
-  //   throw error;
-  // });
-  
+ 
   this.getGeoInfo();
 
 
@@ -234,7 +151,7 @@ this.setState({
             <input  type="text"
                 required
                 className="form-control"
-                pattern='^\d[,\d]*'
+                pattern='^-?\d[,-?\d]*'
                 value={this.state.array}
                 onChange={this.onChangeArray}
             />
